@@ -31,7 +31,6 @@ brew install homebrew/dupes/grep
 # Remove outdated versions from the cellar.
 brew cleanup
 
-# Install tmux
 brew install tmux
 
 # Requires brew to be installed.
@@ -40,3 +39,6 @@ brew install caskroom/cask/brew-cask
 # Casks:
 brew cask install iterm2
 brew cask install google-chrome
+brew cask install vlc
+brew cask install virtualbox
+brew cask install utorrent
