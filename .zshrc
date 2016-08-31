@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="pure"
+ZSH_THEME="gianu"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -80,9 +80,6 @@ export NVM_DIR="~/.nvm"
 
 # Using node by default
 nvm use node
-
-# Z.sh
-. ~/.dotfiles/.z/z.sh
 
 # NVM
 export NVM_DIR="~/.nvm"
