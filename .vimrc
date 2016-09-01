@@ -4,19 +4,24 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+	
+	" let Vundle manage Vundle, required
+	Plugin 'VundleVim/Vundle.vim'
+	Bundle 'kien/ctrlp.vim'
+	Plugin 'scrooloose/nerdtree'
+	Plugin 'jacoborus/tender'
+	Plugin 'itchyny/lightline.vim'
+	Plugin 'pangloss/vim-javascript'
+	Plugin 'tstelzer/welpe.vim'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jacoborus/tender'
-Plugin 'itchyny/lightline.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'tstelzer/welpe.vim'
+call vundle#end()
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-let macvim_skip_colorscheme=1
+filetype plugin indent on
 colorscheme welpe
+let macvim_skip_colorscheme=1
+
+set t_Co=256
+
 " set lighline theme
 let g:lightline = { 'colorscheme': 'welpe' }
 
@@ -29,6 +34,7 @@ set backspace=indent,eol,start
 
 " Enable line numbers
 set number
+
 " Enable syntax highlighting
 syntax on
 
@@ -60,3 +66,6 @@ set scrolloff=3
 set title
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Open NerdTree when pressed Ctrl + n
+map <C-n> :NERDTreeToggle<CR>
