@@ -1,66 +1,110 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
-	
-	" let Vundle manage Vundle, required
 	Plugin 'VundleVim/Vundle.vim'
 	Bundle 'kien/ctrlp.vim'
 	Plugin 'scrooloose/nerdtree'
-	Plugin 'jacoborus/tender'
-	Plugin 'itchyny/lightline.vim'
-	Plugin 'pangloss/vim-javascript'
-	Plugin 'tstelzer/welpe.vim'
-
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
+    Bundle 'reedes/vim-colors-pencil'
+    Plugin 'chriskempson/base16-vim'
+    Bundle 'morhetz/gruvbox'
 call vundle#end()
 
-filetype plugin indent on
-colorscheme welpe
-let macvim_skip_colorscheme=1
+colorscheme gruvbox
 
 set t_Co=256
+set background=dark
+set term=screen-256color
+let base16colorspace=256
 
-" set lighline theme
-let g:lightline = { 'colorscheme': 'welpe' }
+" Theme Configuration
+let g:pencil_neutral_headings = 1
+let g:pencil_neutral_code_bg = 0
+let g:pencil_gutter_color = 1
+let g:airline_theme = 'gruvbox'
 
-" Allow backspace in insert mode
+if has('autocmd')
+	filetype plugin indent on
+endif
+if has('syntax') && !exists('g:syntax_on')
+	syntax enable
+endif
+
+
+set autoindent
 set backspace=indent,eol,start
-
-" Respect modeline in files
-"set modeline
-"set modelines=4
-
-" Enable line numbers
+set complete-=i
 set number
 
-" Enable syntax highlighting
-syntax on
+" Remove Scratch window:
+set completeopt-=preview
+set showmatch
+set showmode
+set smarttab
 
-" Highlight current line
+
+" Trying to speed up vim:
+set ttyfast
+set ttyscroll=3
+set lazyredraw " to avoid scrolling problems
+set synmaxcol=128
+
+
+set laststatus=2
+set ruler
+set showcmd
+set wildmenu
+set autoread
+set encoding=utf-8 nobomb
+set tabstop=4 shiftwidth=4 expandtab
+set listchars=tab:▒░,trail:▓
+set list
+
+set hlsearch
+set ignorecase
+set smartcase
+
+" Necessário para o powerline funcionar no MacVim
+set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+set guifont=ProggyCleanTT\ 12
+
+" Remove fugly scrollbars in MacVim
+set guioptions-=r
+set guioptions-=R
+set guioptions-=L
+
+" Highlights current line
 set cursorline
 
-" Make tabs as wide as four spaces
-set tabstop=4
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+	set mouse=a
+endif
 
-" Highlight searches
-set hlsearch
+" Do not history when leavy buffer
+set hidden
+set nobackup
+set nowritebackup
+set noswapfile
+set fileformats=unix,dos,mac
 
-" Show the cursor position
-set ruler
-" Don’t add empty newlines at the end of files
-set binary
-set noeol
+" CtrlP
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+let g:ctrlp_custom_ignore = {
+	\ 'dir':  'node_modules\|DS_Store\|git\|bower_components',
+	\ 'file': '\v\.(exe|so|dll)$',
+	\ }
 
-" Use UTF-8 without BOM
-set encoding=utf-8 nobomb
-
-" Show the (partial) command as it’s being typed
-set showcmd
- 
-" Start scrolling three lines before the horizontal window border
-set scrolloff=3
+" Trying to improve speed on osx:
+set ttimeout
+set ttimeoutlen=250
+set notimeout
+"
+" set lighline theme
+"let g:lightline = { 'colorscheme': 'welpe' }
 
 " Show the filename in the window titlebar
 set title
