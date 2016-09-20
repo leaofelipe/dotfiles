@@ -11,9 +11,15 @@ call vundle#begin()
     Bundle 'reedes/vim-colors-pencil'
     Plugin 'chriskempson/base16-vim'
     Bundle 'morhetz/gruvbox'
+    Bundle 'andrwb/vim-lapis256'
+    Plugin 'mattn/emmet-vim'
+    Plugin 'othree/javascript-libraries-syntax.vim'
+    Plugin 'jelera/vim-javascript-syntax'
+    Plugin 'tpope/vim-commentary.git'
+    Plugin 'Yggdroot/indentLine'
 call vundle#end()
 
-colorscheme gruvbox
+colorscheme lapis256
 
 set t_Co=256
 set background=dark
@@ -24,7 +30,10 @@ let base16colorspace=256
 let g:pencil_neutral_headings = 1
 let g:pencil_neutral_code_bg = 0
 let g:pencil_gutter_color = 1
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'wombat'
+
+" Javascript Syntax
+let g:used_javascript_libs = 'underscore,backbone,angularjs'
 
 if has('autocmd')
 	filetype plugin indent on
@@ -44,6 +53,9 @@ set completeopt-=preview
 set showmatch
 set showmode
 set smarttab
+
+let g:indentLine_enabled = 1
+let g:indentLine_color_term = 239
 
 
 " Trying to speed up vim:
@@ -68,8 +80,8 @@ set ignorecase
 set smartcase
 
 " Necessário para o powerline funcionar no MacVim
-set guifont=Source\ Code\ Pro\ for\ Powerline:h13
-set guifont=ProggyCleanTT\ 12
+set guifont=Source\ Code\ Pro\ for\ Powerline:h11
+set guifont=ProggyCleanTT\ 10
 
 " Remove fugly scrollbars in MacVim
 set guioptions-=r
@@ -113,3 +125,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Open NerdTree when pressed Ctrl + n
 map <C-n> :NERDTreeToggle<CR>
+
+" Comment line like Sublime
+map <C-_> :Commentary<CR>
+
+" Go to tabs more quickly
+" tab mappings
+map <C-t> :tabnew<CR>
