@@ -3,9 +3,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
-	Plugin 'VundleVim/Vundle.vim'
-	Bundle 'kien/ctrlp.vim'
-	Plugin 'scrooloose/nerdtree'
+    Plugin 'VundleVim/Vundle.vim'
+    Bundle 'kien/ctrlp.vim'
+    Plugin 'scrooloose/nerdtree'
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
     Bundle 'reedes/vim-colors-pencil'
