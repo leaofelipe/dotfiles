@@ -1,0 +1,17 @@
+[user]
+	name = Felipe Leão
+	email = felipe@felipeleao.com
+[core]
+	editor = vim
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = ~/.gitignore
+
+[push]
+	default = matching
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

@@ -1,4 +1,4 @@
-export ZSH=/home/felipe/.oh-my-zsh
+export ZSH=/home/$(whoami)/.oh-my-zsh
 ZSH_THEME="gianu"
 
 # Plugins
