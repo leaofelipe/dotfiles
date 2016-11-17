@@ -205,3 +205,4 @@ bar {
 # Startup stuff
 exec --no-startup-id xsetroot -solid "#151515"
 exec_always --no-startup-id rescuetime
+exec --no-startup-id nm-applet
