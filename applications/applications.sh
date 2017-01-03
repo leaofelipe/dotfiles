@@ -36,8 +36,6 @@ fi
 
 # Node
 echo -e "\e[32mInstalling NODE\e[m"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 nvm install node
 nvm use default
 
