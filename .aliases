@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
 alias dev="cd ~/DEV"
+alias wm="nautilus"
