@@ -16,30 +16,8 @@ fi
 # Install Vundle
 if ! [ -d $HOME/.vim/bundle ]; then
     echo -e "\e[32mInstalling Vundle\e[m"
-    git clone https://github.com/VundleVim/Vundle.vim.git /home/$(whoami)/.vim/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
     # Install Vundle plugins
     vim +PluginInstall +qall
 fi
-
-# NVM
-if [ -d $HOME/.nvm ]; then
-    echo "NVM Already installed"
-else
-    echo -e "\e[32mInstalling NVM\e[m"
-    if ! [ -e $HOME/.zshrc ] && ! [ -e $HOME/.bashrc ]; then
-        touch $HOME/.bashrc
-    fi
-
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
-fi
-
-# Node
-echo -e "\e[32mInstalling NODE\e[m"
-nvm install node
-nvm use default
-
-# NPM Dependencies
-echo -e "\e[32mInstalling NPM Dependencies\e[m"
-npm install -g grunt-cli
-npm install -g bower

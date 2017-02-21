@@ -21,6 +21,7 @@ unset syncAll;
 
 # Install System Packages
 source ./applications/system.sh
+source ./applications/applications.sh
 
 # Reload .bash_profile
 source ~/.bash_profile
