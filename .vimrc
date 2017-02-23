@@ -38,12 +38,13 @@ let g:airline_powerline_fonts=1
 let g:airline_theme='oceanicnext'
 
 "JAVASCRIPT LIBRARIES"
-let g:used_javascript_libs = 'underscore,backbone,angularjs,angularui'
+let g:used_javascript_libs = 'underscore,backbone,angularjs,angularui,socketio,express'
 
 "EXTRA CONFIG"
 set backspace=indent,eol,start
-set shiftwidth=4 " Indentation 4 spaces
-set tabstop=4
+set shiftwidth=2 " Indentation 4 spaces
+set tabstop=2
+set expandtab " Conrert tabs to spaces
 set autoindent
 set number " Show line number
 set numberwidth=3
@@ -95,7 +96,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['standard']
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-_> :Commentary<CR>
