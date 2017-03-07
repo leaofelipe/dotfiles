@@ -99,5 +99,5 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['standard']
 
 map <C-n> :NERDTreeToggle<CR>
-map <C-_> :Commentary<CR>
+map <C-k> :Commentary<CR>
 map <C-t> :tabnew<CR>
