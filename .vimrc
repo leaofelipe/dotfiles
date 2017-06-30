@@ -7,10 +7,20 @@ call vundle#begin()
     Bundle 'kien/ctrlp.vim'
     Plugin 'scrooloose/nerdtree'
     Plugin 'sheerun/vim-polyglot'
+    Plugin 'atelierbram/Base2Tone-vim.git'
     Plugin 'tpope/vim-commentary.git'
-    Plugin 'mhartington/oceanic-next'    
+    Plugin 'ryanpcmcquen/true-monochrome_vim.git'
+    Plugin 'shattered/vimcolors.git'
+    Plugin 'encody/nvim.git'
+    Plugin 'mhartington/oceanic-next'
+    Plugin 'widatama/vim-phoenix.git'
+    Plugin 'noahfrederick/vim-hemisu'
+    Plugin 'vim-scripts/oceandeep.git'
+    Plugin 'andrwb/vim-lapis256.git'
     Plugin 'vim-airline/vim-airline'
+    Plugin 'lxmzhv/vim.git'
     Plugin 'vim-airline/vim-airline-themes'
+    Plugin 'zaki/zazen.git'
     Plugin 'othree/yajs.vim'    
     Plugin 'othree/javascript-libraries-syntax.vim'
     Plugin 'Yggdroot/indentLine'
@@ -19,8 +29,8 @@ call vundle#end()
 
 "COLORSCHEME"
 set t_Co=256
+colorscheme hemisu
 set background=dark
-colorscheme OceanicNext
 syntax enable
 set ruler
 let g:lightline = { 'colorscheme': 'oceanicnext' }
@@ -28,7 +38,6 @@ let g:lightline = { 'colorscheme': 'oceanicnext' }
 if (has("termguicolors"))
  set termguicolors
 endif
-
 
 "FONTS AND ENCODING"
 set encoding=utf8
