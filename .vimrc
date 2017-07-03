@@ -15,8 +15,6 @@ call vundle#begin()
     Plugin 'mhartington/oceanic-next'
     Plugin 'widatama/vim-phoenix.git'
     Plugin 'noahfrederick/vim-hemisu'
-    Plugin 'vim-scripts/oceandeep.git'
-    Plugin 'andrwb/vim-lapis256.git'
     Plugin 'vim-airline/vim-airline'
     Plugin 'lxmzhv/vim.git'
     Plugin 'vim-airline/vim-airline-themes'
@@ -24,16 +22,17 @@ call vundle#begin()
     Plugin 'othree/yajs.vim'    
     Plugin 'othree/javascript-libraries-syntax.vim'
     Plugin 'Yggdroot/indentLine'
-	Plugin 'vim-syntastic/syntastic'
+	  Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 
 "COLORSCHEME"
-set t_Co=256
-colorscheme hemisu
+set t_Co=
+colorscheme zazen
 set background=dark
 syntax enable
 set ruler
 let g:lightline = { 'colorscheme': 'oceanicnext' }
+highlight LineNr ctermfg=grey term=NONE
 
 if (has("termguicolors"))
  set termguicolors
