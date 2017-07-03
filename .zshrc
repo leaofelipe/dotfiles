@@ -1,4 +1,4 @@
-ZSH_THEME="geoffgarside"
+ZSH_THEME="minimal"
 
 # Plugins
 plugins=(git)
