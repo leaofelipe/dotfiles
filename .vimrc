@@ -7,43 +7,39 @@ call vundle#begin()
     Bundle 'kien/ctrlp.vim'
     Plugin 'scrooloose/nerdtree'
     Plugin 'sheerun/vim-polyglot'
-    Plugin 'atelierbram/Base2Tone-vim.git'
     Plugin 'tpope/vim-commentary.git'
-    Plugin 'ryanpcmcquen/true-monochrome_vim.git'
-    Plugin 'shattered/vimcolors.git'
-    Plugin 'encody/nvim.git'
-    Plugin 'mhartington/oceanic-next'
-    Plugin 'widatama/vim-phoenix.git'
-    Plugin 'noahfrederick/vim-hemisu'
     Plugin 'vim-airline/vim-airline'
     Plugin 'lxmzhv/vim.git'
-    Plugin 'vim-airline/vim-airline-themes'
-    Plugin 'zaki/zazen.git'
     Plugin 'othree/yajs.vim'    
     Plugin 'othree/javascript-libraries-syntax.vim'
     Plugin 'Yggdroot/indentLine'
 	  Plugin 'vim-syntastic/syntastic'
+    Plugin 'zcodes/vim-colors-basic.git'
+    Plugin 'shattered/vimcolors.git'
+    Plugin 'bounceme/base.vim.git'
+    Plugin 'gregsexton/Muon.git'
 call vundle#end()
-
-"COLORSCHEME"
-set t_Co=
-colorscheme zazen
-set background=dark
-syntax enable
-set ruler
-let g:lightline = { 'colorscheme': 'oceanicnext' }
-highlight LineNr ctermfg=grey term=NONE
-
-if (has("termguicolors"))
- set termguicolors
-endif
 
 "FONTS AND ENCODING"
 set encoding=utf8
 
+" SPEED UP VIM
+set ttyfast
+set ttyscroll=2
+set lazyredraw
+set synmaxcol=128
+
+"COLORSCHEME"
+set t_Co=256
+colorscheme muon
+set background=dark
+syntax enable
+let g:indentLine_color_term = 239
+set ruler
+highlight LineNr ctermfg=grey term=NONE
+
 "AIRLINE CONFIG
 let g:airline_powerline_fonts=1
-let g:airline_theme='oceanicnext'
 
 "JAVASCRIPT LIBRARIES"
 let g:used_javascript_libs = 'underscore,backbone,angularjs,angularui,socketio,express'
@@ -56,7 +52,6 @@ set expandtab " Conrert tabs to spaces
 set autoindent
 set number " Show line number
 set numberwidth=3
-let g:indentLine_color_term = 239
 set showcmd
 set autoread
 set hlsearch
@@ -69,32 +64,19 @@ set nowritebackup
 set noswapfile
 set fileformats=unix,dos,mac
 
-"Trying to speed up vim"
-set ttyfast
-set ttyscroll=2
-set lazyredraw
-set synmaxcol=128
 
 " Enable mouse
 if has('mouse')
-    set mouse=a
+  set mouse=a
 endif
 
-
-" CtrlP
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-let g:ctrlp_custom_ignore = {
- 	\ 'dir':  'node_modules\|DS_Store\|git\|bower_components',
- 	\ 'file': '\v\.(exe|so|dll)$',
- 	\ }
 
 " Show the filename in the window titlebar
 set title
 autocmd StdinReadPre * let s:std_in=1
 autocmd vimenter * NERDTree
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif -- Close nerdtree if Just one file opened was closed
-
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
