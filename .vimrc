@@ -42,7 +42,7 @@ highlight LineNr ctermfg=grey term=NONE
 let g:airline_powerline_fonts=1
 
 "JAVASCRIPT LIBRARIES"
-let g:used_javascript_libs = 'underscore,backbone,angularjs,angularui,socketio,express'
+let g:used_javascript_libs = 'underscore,backbone,angularjs,angularui,socketio,express,react'
 
 "EXTRA CONFIG"
 set backspace=indent,eol,start
@@ -91,3 +91,4 @@ let g:syntastic_javascript_checkers = ['standard']
 map <C-n> :NERDTreeToggle<CR>
 map <C-k> :Commentary<CR>
 map <C-t> :tabnew<CR>
+Plugin 'wakatime/vim-wakatime'
