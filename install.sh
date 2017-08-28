@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Updating the packages
-echo -e "\e[93mUpdating and upgrading packages...\e[m"
-sudo apt update -qq
-sudo apt upgrade -qq
-
 # Basic Install function
 basicInstall() {
 	echo -e "\e[32mInstalling $1\e[m"
