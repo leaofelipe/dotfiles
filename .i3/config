@@ -230,3 +230,4 @@ bar {
 exec --no-startup-id nm-applet
 exec --no-startup-id slack
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id volumeicon
