@@ -6,6 +6,9 @@ basicInstall() {
 	sudo apt -y -qq install $1
 }
 
+# Install System Packages
+source ./applications/system.sh
+
 # Sync dotfiles
 syncAll() {
     rsync --exclude ".git/" --exclude "install.sh" --exclude "readme.md" -avh --no-perms . ~;
@@ -13,10 +16,6 @@ syncAll() {
 }
 syncAll;
 unset syncAll;
-
-# Install System Packages
-source ./applications/system.sh
-source ./applications/applications.sh
 
 # Reload .bash_profile
 source ~/.bash_profile
