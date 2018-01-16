@@ -1,3 +1,4 @@
 #### Dotfiles  
-Just run: ```source install.sh```  
-To install applications like NVM, Terminator and Oh-My-ZSH, run ```source ./applications/applications.sh```
+Just run: ```source install.sh``` 
+
+![Cute](https://media.giphy.com/media/l1JohSwNX3aZU474I/giphy.gif)
