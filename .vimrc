@@ -12,11 +12,15 @@ call vundle#begin()
     Plugin 'lxmzhv/vim.git'
     Plugin 'othree/yajs.vim'    
     Plugin 'othree/javascript-libraries-syntax.vim'
+    Plugin 'hauleth/blame.vim'
     Plugin 'Yggdroot/indentLine'
 	  Plugin 'vim-syntastic/syntastic'
     Plugin 'zcodes/vim-colors-basic.git'
     Plugin 'shattered/vimcolors.git'
     Plugin 'bounceme/base.vim.git'
+    Plugin 'kristijanhusak/vim-hybrid-material'
+    Plugin 'andrwb/vim-lapis256'
+    Plugin 'crusoexia/vim-monokai'
     Plugin 'gregsexton/Muon.git'
 call vundle#end()
 
@@ -31,10 +35,12 @@ set synmaxcol=128
 
 "COLORSCHEME"
 set t_Co=256
-colorscheme muon
 set background=dark
+"set termguicolors
+colorscheme monokai
 syntax enable
 let g:indentLine_color_term = 239
+let g:enable_bold_font = 1
 set ruler
 highlight LineNr ctermfg=grey term=NONE
 
