@@ -22,6 +22,7 @@ call vundle#begin()
     Plugin 'andrwb/vim-lapis256'
     Plugin 'crusoexia/vim-monokai'
     Plugin 'gregsexton/Muon.git'
+    Plugin 'wakatime/vim-wakatime'
 call vundle#end()
 
 "FONTS AND ENCODING"
@@ -97,4 +98,3 @@ let g:syntastic_javascript_checkers = ['standard']
 map <C-n> :NERDTreeToggle<CR>
 map <C-k> :Commentary<CR>
 map <C-t> :tabnew<CR>
-Plugin 'wakatime/vim-wakatime'
