@@ -22,7 +22,6 @@ call vundle#begin()
     Plugin 'andrwb/vim-lapis256'
     Plugin 'crusoexia/vim-monokai'
     Plugin 'gregsexton/Muon.git'
-    Plugin 'wakatime/vim-wakatime'
 call vundle#end()
 
 "FONTS AND ENCODING"
