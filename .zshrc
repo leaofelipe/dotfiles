@@ -8,6 +8,11 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.bashrc
 
+# Load TMUX
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
 # Pyenv
 # eval "$(pyenv init -)"
 
